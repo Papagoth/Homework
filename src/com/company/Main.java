@@ -10,13 +10,8 @@ public class Main {
     {
         List<Integer> list =new List<>();
         list.add(132);
-        list.add(12);
-        list.add(132);
-        list.add(12);
-        list.add(132);
-        list.add(12);
-        list.replace(3,1000);
-        System.out.println(list.get(3));
+        list.get(3);
+        System.out.println(list.getSize());
 
     }
 

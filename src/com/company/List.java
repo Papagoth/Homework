@@ -22,6 +22,8 @@ public class List<T> {
     }
     public T get(int index)
     {
+        if(size < index)throw new RuntimeException("index out of bounds");
+
         Node<T> Head = head;
         T t;
         for(int i = 0; i < index-1;i++)
@@ -55,6 +57,8 @@ public class List<T> {
     }
     public void replace(int i, T t)
     {
+        if(size < i) throw new RuntimeException("index out of bounds");
+
         Node<T> Head = head;
         for(int j = 0; j < i-1;j++)
         {
