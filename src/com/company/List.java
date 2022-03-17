@@ -51,8 +51,8 @@ public class List<T> {
             last = last.getPrev();
             return;
         }
-        Head.getPrev().setNext(head.getNext());
-        Head.getNext().setPrev(head.getPrev());
+        Head.getPrev().setNext(Head.getNext());
+        Head.getNext().setPrev(Head.getPrev());
         size --;
     }
     public void replace(int i, T t)
