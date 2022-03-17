@@ -34,6 +34,7 @@ public class List<T> {
     }
     public void remove(int i)
     {
+        if(size < i) throw new RuntimeException("index out of bounds");
 
         Node<T> Head = head;
         for(int j = 0; j < i-1;j++)
