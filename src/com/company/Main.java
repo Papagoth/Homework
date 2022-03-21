@@ -1,49 +1,37 @@
 package com.company;
 
-import java.util.LinkedList;
-import java.util.concurrent.Callable;
 
 public class Main {
 
 
-    public static void main(String[] args)
-    {
-        Picture picture = new Picture();
-        Picture picturemain= new Picture();
-        Square square = new Square();
-        Square square1 = new Square();
-        Square square2 = new Square();
-        Square square3 = new Square();
-        Triangle triangle1 = new Triangle();
-        Triangle triangle2 = new Triangle();
-        Triangle triangle3 = new Triangle();
-        Triangle triangle4 = new Triangle();
-        Triangle triangle5 = new Triangle();
-        Circle circle1 =  new Circle();
-        Circle circle2 =  new Circle();
-        Circle circle3 =  new Circle();
-        Circle circle4 =  new Circle();
-        picture.figures.add(square);
-        picture.figures.add(square1);
-        picture.figures.add(square2);
-        picture.figures.add(square3);
-        picture.figures.add(triangle1);
-        picture.figures.add(triangle2);
-        picture.figures.add(triangle3);
-        picture.figures.add(triangle4);
-        picture.figures.add(triangle5);
-        picturemain.figures.add(picture);
-        picturemain.figures.add(circle1);
-        picturemain.figures.add(circle2);
-        picturemain.figures.add(circle3);
-        picturemain.figures.add(circle4);
-        for(int i = 0 ;i < picturemain.figures.size();i++)
+    public static void main(String[] args) {
+        int[] arr1 = {3,7,9,1,6,8};
+        int[] arr2 = {3,7,9,1,6,8};
+        int[] arr3 = {3,7,9,1,6,8};
+        CountingSort countingSort = new CountingSort();
+        BubbleSort bubbleSort =  new BubbleSort();
+        SelectionSort selectionSort = new SelectionSort();
+        SorterStrategy sort1 = new SorterStrategy(countingSort);
+        SorterStrategy sort2 = new SorterStrategy(bubbleSort);
+        SorterStrategy sort3 = new SorterStrategy(selectionSort);
+        sort1.sort.executeSort(arr1);
+        System.out.println("arr1");
+        for(int i = 0;i < arr1.length;i++)
         {
-            picturemain.figures.get(i).draw();
+            System.out.println(" "+arr1[i]+" ");
         }
-
-
-
+        sort2.sort.executeSort(arr2);
+        System.out.println("arr2");
+        for(int i = 0;i < arr2.length;i++)
+        {
+            System.out.println(" "+arr2[i]+ " ");
+        }
+        sort3.sort.executeSort(arr3);
+        System.out.println("arr3");
+        for(int i = 0;i < arr3.length;i++)
+        {
+            System.out.println(" "+arr3[i]+ " ");
+        }
 
 
     }
